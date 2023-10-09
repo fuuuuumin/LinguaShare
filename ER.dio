@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="0csjKc4Ay-YlDMvAC5BQ" name="ページ1">
-        <mxGraphModel dx="1584" dy="703" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="2023" dy="952" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -332,7 +332,7 @@
                     </mxGeometry>
                 </mxCell>
                 <mxCell id="137" value="中間テーブル" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;fontColor=#FF9933;" vertex="1" parent="1">
-                    <mxGeometry x="-184" y="750" width="194" height="30" as="geometry"/>
+                    <mxGeometry x="-170" y="750" width="194" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="138" value="中間テーブル" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;fontColor=#FF9933;" vertex="1" parent="1">
                     <mxGeometry x="130" y="1016" width="194" height="30" as="geometry"/>
