@@ -1,0 +1,39 @@
+<div>
+質問投稿ページ
+
+
+<%# 投稿フォーム %>
+<%= form_with model: @question, local: true do |f| %>
+<%= render 'shared/error_messages', model: f.object %>
+<div>
+  <div>
+    タイトル
+  </div>
+  <%= f.text_field :question_title, class:"items-text", id:"item-name", placeholder:"タイトル（50文字まで)", maxlength:"50" %>
+</div>
+<div>
+  <div>
+    質問したい言語を選択
+  </div>
+  <%= f.collection_select(:language_id, Language.all, :id, :name, {}, {class:"items-text"}) %>
+</div>
+<div>
+  <div>
+    質問内容
+  </div>
+  <%= f.text_area :question_content, class:"items-text", id:"item-name", placeholder:"質問内容を入力してください" %>
+</div>
+<%# 下部ボタン %>
+  <div>
+    <%= f.submit "投稿する" ,class:"sell-btn" %>
+    <%=link_to 'もどる', root_path, class:"back-btn" %>
+  </div>
+<%# /下部ボタン %>
+<% end %>
+<%# /投稿フォーム %>
+
+</div>
+
+
+
+
