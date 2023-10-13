@@ -4,6 +4,7 @@
 
 <%# 投稿フォーム %>
 <%= form_with model: @question, local: true do |f| %>
+<%= render 'shared/error_messages', model: f.object %>
 <div>
   <div>
     タイトル
@@ -14,7 +15,7 @@
   <div>
     質問したい言語を選択
   </div>
-  <%= f.text_field :language_id, class:"items-text", id:"item-name", placeholder:"言語カテゴリ" %>
+  <%= f.collection_select(:language_id, Language.all, :id, :name, {}, {class:"items-text"}) %>
 </div>
 <div>
   <div>
