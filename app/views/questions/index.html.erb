@@ -1,3 +1,16 @@
-質問一覧ページ
+<div>
+  質問一覧ページ
+</div>
 
-<%= link_to "質問を投稿する", new_question_path, class: "post" %>
+<div>
+  <%= link_to "質問を投稿する", new_question_path, class: "post" %>
+</div>
+<div>
+  <% @questions.each do |q| %>
+    <div>
+      <%= q.question_title %>
+      <%= q.language.name %>
+      <%= q.created_at %>
+    </div>
+  <% end %>
+</div>
