@@ -1,0 +1,18 @@
+<div>
+  質問詳細ページ
+</div>
+
+<div>
+    <div>
+      <div>
+        <%= @question.question_title %>
+      </div>
+      <div>
+        <%= @question.question_content %>
+      </div>
+      <div>
+        <%= @question.language.name %>
+        <%= @question.created_at.to_s(:datetime_jp) %>
+      </div>
+    </div>
+</div>

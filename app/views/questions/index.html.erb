@@ -9,7 +9,7 @@
   <% @questions.each do |q| %>
     <div>
       <div>
-        <%= q.question_title %>
+        <%= link_to q.question_title, question_path(q.id) %>
       </div>
       <div>
         <%= q.language.name %>
