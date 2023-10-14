@@ -28,3 +28,17 @@
     <% end %>
   </div>
 </div>
+
+
+<div>
+  <div>
+    コメント一覧
+  </div>
+  <div>
+    <% @answers.each do |answer| %>
+      <div>
+        <%= answer.answer_content %>
+      </div>
+    <% end %>
+  </div>
+</div>

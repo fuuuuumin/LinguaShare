@@ -6,6 +6,7 @@ class AnswersController < ApplicationController
       redirect_to question_path(@answer.question)
     else
       @question = @answer.question
+      @answers = @question.answers
       render "questions/show"
     end
   end
