@@ -1,0 +1,32 @@
+<div>
+プロフィールページ
+
+
+<%# 投稿フォーム %>
+<%= form_with model: @profile, local: true do |profile| %>
+<%= render 'shared/error_messages', model: profile.object %>
+<div>
+  <div>
+    ニックネーム
+  </div>
+  <%= profile.text_field :nickname, class:"items-text", id:"item-name", placeholder:"ニックネーム", maxlength:"50" %>
+</div>
+<div>
+  <div>
+    プロフィール
+  </div>
+  <%= profile.text_area :introduction, class:"items-text", id:"item-name", placeholder:"プロフィールを入力してください" %>
+</div>
+<%# 下部ボタン %>
+  <div>
+    <%= profile.submit "保存する" ,class:"sell-btn" %>
+    <%=link_to 'もどる', root_path, class:"back-btn" %>
+  </div>
+<%# /下部ボタン %>
+<% end %>
+<%# /投稿フォーム %>
+
+</div>
+
+
+
