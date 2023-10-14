@@ -5,6 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :questions
+  has_many :answers
 
   validates :last_name, :first_name, :last_name_kana, :first_name_kana, presence: { message: 'は必須項目です。' }
   validates :last_name, :first_name, format: { with: /\A[ぁ-んァ-ヶ一-龥々ー]+\z/, message: 'は全角で入力して下さい。' }

@@ -16,3 +16,29 @@
       </div>
     </div>
 </div>
+
+<div>
+  <div>
+    <% if user_signed_in? %>
+      <%= form_with(model: [@question, @answer], local: true) do |form| %>
+        <%= render 'shared/error_messages', model: form.object %>
+        <%= form.text_area :answer_content, placeholder: "回答する", rows: "3" %>
+        <%= form.submit "SEND" %>
+        <% end %>
+    <% end %>
+  </div>
+</div>
+
+
+<div>
+  <div>
+    コメント一覧
+  </div>
+  <div>
+    <% @answers.each do |answer| %>
+      <div>
+        <%= answer.answer_content %>
+      </div>
+    <% end %>
+  </div>
+</div>
