@@ -53,6 +53,5 @@ test:
 #
 production:
   <<: *default
-  database: LinguaShare_production
-  username: LinguaShare
-  password: <%= ENV['LINGUASHARE_DATABASE_PASSWORD'] %>
+  adapter: postgresql
+  url: <%= ENV['DATABASE_URL'] %>
