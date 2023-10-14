@@ -16,3 +16,14 @@
       </div>
     </div>
 </div>
+
+<div>
+  <div>
+    <% if user_signed_in? %>
+      <%= form_with(model: [@question, @answer], local: true) do |form| %>
+          <%= form.text_area :answer_content, placeholder: "回答する", rows: "3" %>
+          <%= form.submit "SEND" %>
+        <% end %>
+    <% end %>
+  </div>
+</div>
