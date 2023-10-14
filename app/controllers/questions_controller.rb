@@ -2,7 +2,7 @@ class QuestionsController < ApplicationController
   before_action :move_to_index, except: [:index, :show]
 
   def index
-    
+    @questions = Question.order('created_at DESC')
   end
 
   def new
