@@ -5,6 +5,6 @@ Rails.application.routes.draw do
   resources :questions, only: [:index, :new, :create, :show] do
     resources :answers, only: :create
   end
-  resources :profiles, only: [:index, :new, :create]
+  resources :profiles, only: [:index, :new, :create, :show]
 
 end

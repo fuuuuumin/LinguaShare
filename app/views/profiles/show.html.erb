@@ -1,0 +1,17 @@
+<div>
+  プロフィールページ
+</div>
+
+<div>
+    <div>
+      <div>
+        <%= @profile.nickname %>
+      </div>
+      <div>
+        <%= image_tag @profile.profile_image if @profile.profile_image.attached? %>
+      </div>
+      <div>
+        <%= @profile.introduction %>
+      </div>
+    </div>
+</div>
