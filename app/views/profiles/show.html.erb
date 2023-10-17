@@ -15,3 +15,17 @@
       </div>
     </div>
 </div>
+
+<div>
+  <% @questions.each do |q| %>
+    <div>
+      <div>
+        <%= link_to q.question_title, question_path(q.id) %>
+      </div>
+      <div>
+        <%= q.language.name %>
+        <%= q.created_at.to_s(:datetime_jp) %>
+      </div>
+    </div>
+  <% end %>
+</div>
