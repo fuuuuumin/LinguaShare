@@ -13,3 +13,66 @@
  *= require_tree .
  *= require_self
  */
+
+/* コンテンツ全体 */
+
+.container {
+  width: 880px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* h1周辺 */
+
+.page-title {
+  margin-bottom: 32px;
+}
+
+.h1 {
+  font-size: 32px;
+  text-align: center;
+}
+
+/* プライマリーボタン */
+
+.primary-button {
+  border: 2px solid #4C2EF4;
+  font-weight: bold;
+  padding: 10px 30px;
+  border-radius: 50px;
+}
+
+/* 質問一覧 */
+
+.question-list {
+  background-color: #FDFDFF;
+  margin-bottom: 16px;
+  border-radius: 4px;
+  padding: 16px 32px;
+}
+
+.question-list-top {
+  display: flex;
+  margin-bottom: 8px;
+}
+
+.question-list-top-language {
+  background-color: #F0662F;
+  color: #FDFDFF;
+  padding: 4px 16px;
+  border-radius: 4px;
+  margin-right: 16px;
+}
+
+.question-list-top-title {
+  font-size: 18px;
+  font-weight: bold;
+  align-items: center;
+  color: #180E3D;
+}
+
+.question-list-bottom {
+  font-size: 14px;
+}
+
+

@@ -1,0 +1,19 @@
+.question-wrapper {
+  width: 100%;
+  background-color: #F3F3F3;
+  padding-top: 40px;
+}
+
+.button-area {
+  margin-bottom: 24px;
+  display: flex;
+}
+
+.button-area-right {
+  margin: 0 0 0 auto;
+  color: #4C2EF4;
+}
+
+.bottom-box {
+  height: 40px;
+}
