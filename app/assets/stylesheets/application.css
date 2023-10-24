@@ -16,11 +16,20 @@
 
 /* コンテンツ全体 */
 
+.main-wrapper {
+  width: 100%;
+  background-color: #F3F3F3;
+  padding-top: 40px;
+}
+
+
 .container {
   width: 880px;
   margin: 0 auto;
   padding: 0 40px;
 }
+
+
 
 /* h1周辺 */
 
@@ -28,19 +37,35 @@
   margin-bottom: 32px;
 }
 
-.h1 {
+.heading-1 {
   font-size: 32px;
   text-align: center;
 }
 
-/* プライマリーボタン */
+.heading-2 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
 
-.primary-button {
+
+/* ボタン */
+
+.sub-button {
   border: 2px solid #4C2EF4;
   font-weight: bold;
   padding: 10px 30px;
   border-radius: 50px;
 }
+
+.primary-button {
+  border: none;
+  color: #ffffff;
+  background-color: #4C2EF4;
+  font-weight: bold;
+  padding: 10px 30px;
+  border-radius: 50px;
+}
+
 
 /* 質問一覧 */
 
@@ -56,7 +81,7 @@
   margin-bottom: 8px;
 }
 
-.question-list-top-language {
+.question-language {
   background-color: #F0662F;
   color: #FDFDFF;
   padding: 4px 16px;
@@ -64,15 +89,11 @@
   margin-right: 16px;
 }
 
-.question-list-top-title {
+.question-title {
   font-size: 18px;
   font-weight: bold;
-  align-items: center;
   color: #180E3D;
 }
 
-.question-list-bottom {
-  font-size: 14px;
-}
 
 

@@ -1,46 +1,63 @@
 <%= render "shared/header" %>
 
-<div>
-  質問詳細ページ
-</div>
-
-<div>
-    <div>
-      <div>
-        <%= @question.question_title %>
+<div class="main-wrapper">
+  <div class="container">
+    <div class="question-detail">
+        <div class="question-detail-top">
+          <div class="question-language">
+            <%= @question.language.name %>
+          </div>
+          <div class="question-created-at">
+            <%= @question.created_at.to_s(:datetime_jp) %>
+          </div>
+        </div>
+        <div class="question-title question-detail-title">
+          <%= @question.question_title %>
+        </div>
+        <div class="question-detail-content">
+          <%= @question.question_content %>
+        </div>
+    </div>
+    <div class="answers">
+      <div class="heading-2">
+        <h2>回答一覧</h2>
       </div>
-      <div>
-        <%= @question.question_content %>
-      </div>
-      <div>
-        <%= @question.language.name %>
-        <%= @question.created_at.to_s(:datetime_jp) %>
+      <div class="answer-lists">
+        <% @answers.each do |answer| %>
+          <div class="answer-list">
+            <div class="answer-created-at">
+              <%= answer.created_at.to_s(:datetime_jp) %>
+            </div>
+            <div class="answer-content">
+              <%= answer.answer_content %>
+            </div>
+          </div>
+        <% end %>
       </div>
     </div>
-</div>
-
-<div>
-  <div>
-    <% if user_signed_in? %>
-      <%= form_with(model: [@question, @answer], local: true) do |form| %>
-        <%= render 'shared/error_messages', model: form.object %>
-        <%= form.text_area :answer_content, placeholder: "回答する", rows: "3" %>
-        <%= form.submit "SEND" %>
-        <% end %>
-    <% end %>
-  </div>
-</div>
-
-
-<div>
-  <div>
-    コメント一覧
-  </div>
-  <div>
-    <% @answers.each do |answer| %>
-      <div>
-        <%= answer.answer_content %>
+    <div class="answer-form">
+      <div class="heading-2">
+        <h2>回答する</h2>
       </div>
-    <% end %>
+      <div>
+        <% if user_signed_in? %>
+          <%= form_with(model: [@question, @answer], local: true, class: "answer-form") do |form| %>
+            <%= render 'shared/error_messages', model: form.object %>
+            <%= form.text_area :answer_content, class: "answer-input", placeholder: "回答を入力してください", rows: "3" %>
+            <div class="answer-button-outer">
+              <%= form.submit "回答する", class:"primary-button answer-button" %>
+            </div>
+            <% end %>
+        <% end %>
+      </div>
+    </div>
+    <div class="bottom-box">
+    </div>
   </div>
 </div>
+
+
+
+
+
+

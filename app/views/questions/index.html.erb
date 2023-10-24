@@ -1,30 +1,30 @@
 <%= render "shared/header" %>
 
-<div class="question-wrapper">
+<div class="main-wrapper">
   <div class="container">
     <div class="page-title">
-      <h1 class="h1">
+      <h1 class="heading-1">
         質問一覧
       </h1>
     </div>
     <div class="button-area">
       <div class="button-area-right">
-        <%= link_to "質問を投稿する", new_question_path, class:"primary-button" %>
+        <%= link_to "質問を投稿する", new_question_path, class:"sub-button" %>
       </div>
     </div>
     <div class="question-lists">
       <% @questions.each do |q| %>
         <div class="question-list">
           <div class="question-list-top">
-            <div class="question-list-top-language">
+            <div class="question-language">
               <%= q.language.name %>
             </div>
-            <div class="question-list-top-title">
+            <div class="question-title">
               <%= link_to q.question_title, question_path(q.id) %>
             </div>
           </div>
           <div class="question-list-bottom">
-            <div>
+            <div class="question-created-at">
               <%= q.created_at.to_s(:datetime_jp) %>
             </div>
           </div>
