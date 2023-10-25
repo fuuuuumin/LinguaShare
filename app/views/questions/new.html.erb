@@ -1,39 +1,50 @@
 <%= render "shared/header" %>
 
-<div>
-質問投稿ページ
-
-
-<%# 投稿フォーム %>
-<%= form_with model: @question, local: true do |f| %>
-<%= render 'shared/error_messages', model: f.object %>
-<div>
-  <div>
-    タイトル
+<div class="main-wrapper">
+  <div class="container">
+    <div class="page-title">
+      <h1 class="heading-1">
+        質問を投稿する
+      </h1>
+    </div>
+    <div class="question-form">
+      <%# 投稿フォーム %>
+      <%= form_with model: @question, local: true do |f| %>
+      <%= render 'shared/error_messages', model: f.object %>
+        <div class="form-block">
+          <div class="form-heading">
+            タイトル
+          </div>
+          <%= f.text_field :question_title, class:"input-text-field", id:"item-name", placeholder:"タイトルを入力してください", maxlength:"50" %>
+        </div>
+        <div  class="form-block">
+          <div class="form-heading">
+            質問したい言語を選択
+          </div>
+          <%= f.collection_select(:language_id, Language.all, :id, :name, {}, {class:"input-item-list"}) %>
+        </div>
+        <div  class="form-block">
+          <div class="form-heading">
+            質問内容
+          </div>
+          <%= f.text_area :question_content, class:"input-text-area", id:"item-name", placeholder:"質問内容を入力してください" %>
+        </div>
+        <%# 下部ボタン %>
+        <div class="question-form-button-outer">
+          <div class="question-form-button-top">
+            <%= f.submit "投稿する" ,class:"primary-button" %>
+          </div>
+          <div class="question-form-button-bottom">
+            <%=link_to 'もどる', root_path, class:"sub-button" %>
+          </div>
+        </div>
+        <%# /下部ボタン %>
+      <% end %>
+      <%# /投稿フォーム %>
+      <div class="bottom-box">
+      </div>
+    </div>
   </div>
-  <%= f.text_field :question_title, class:"items-text", id:"item-name", placeholder:"タイトル（50文字まで)", maxlength:"50" %>
-</div>
-<div>
-  <div>
-    質問したい言語を選択
-  </div>
-  <%= f.collection_select(:language_id, Language.all, :id, :name, {}, {class:"items-text"}) %>
-</div>
-<div>
-  <div>
-    質問内容
-  </div>
-  <%= f.text_area :question_content, class:"items-text", id:"item-name", placeholder:"質問内容を入力してください" %>
-</div>
-<%# 下部ボタン %>
-  <div>
-    <%= f.submit "投稿する" ,class:"sell-btn" %>
-    <%=link_to 'もどる', root_path, class:"back-btn" %>
-  </div>
-<%# /下部ボタン %>
-<% end %>
-<%# /投稿フォーム %>
-
 </div>
 
 

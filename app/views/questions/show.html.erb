@@ -43,7 +43,7 @@
         <% if user_signed_in? %>
           <%= form_with(model: [@question, @answer], local: true, class: "answer-form") do |form| %>
             <%= render 'shared/error_messages', model: form.object %>
-            <%= form.text_area :answer_content, class: "answer-input", placeholder: "回答を入力してください", rows: "3" %>
+            <%= form.text_area :answer_content, class: "input-text-area", placeholder: "回答を入力してください", rows: "3" %>
             <div class="answer-button-outer">
               <%= form.submit "回答する", class:"primary-button answer-button" %>
             </div>
