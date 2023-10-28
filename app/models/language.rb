@@ -8,5 +8,6 @@ class Language < ActiveHash::Base
 
   include ActiveHash::Associations
   has_many :questions
+  has_many :chat_rooms
 
 end
