@@ -1,5 +1,5 @@
 <header class="header">
-  <div class="container header-container">
+  <div class="header-container">
     <div class="header-leftbox">
       <div class="header-logo">
         LinguaShare
@@ -11,7 +11,7 @@
         <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "header-right-link" %>
         </div>
         <div class="header-rightbox-right">
-        <%= link_to "マイページ", "#", class: "post", class: "header-right-link" %>
+        <%= link_to "マイページ", profile_path(current_user.profile), class: "post", class: "header-right-link" %>
         </div>
       <% else %>
         <div class="header-rightbox-left">

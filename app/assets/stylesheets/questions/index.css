@@ -1,0 +1,18 @@
+
+.button-area {
+  margin-bottom: 24px;
+  display: flex;
+}
+
+.button-area-right {
+  margin: 0 0 0 auto;
+  color: #4C2EF4;
+}
+
+.bottom-box {
+  height: 40px;
+}
+
+.question-created-at {
+  font-size: 14px;
+}

@@ -1,0 +1,40 @@
+
+.question-detail {
+  background-color: #FDFDFF;
+  margin-bottom: 32px;
+  border-radius: 4px;
+  padding: 16px 32px;
+}
+
+.question-detail-top {
+  display: flex;
+  margin-bottom: 12px;
+}
+
+.question-detail-title {
+  margin-bottom: 8px;
+}
+
+.answer-lists {
+  margin-bottom: 24px;
+}
+
+.answer-list {
+  background-color: #FDFDFF;
+  margin-bottom: 16px;
+  border-radius: 4px;
+  padding: 16px 32px;
+}
+
+.answer-created-at {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.answer-button-outer {
+  text-align: center;
+}
+
+.answer-button {
+  display: inline-block;
+}
