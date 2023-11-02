@@ -6,5 +6,6 @@ Rails.application.routes.draw do
     resources :answers, only: :create
   end
   resources :profiles, only: [:index, :new, :create, :show]
+  resources :chat_rooms, only: [:index, :new, :create]
 
 end
